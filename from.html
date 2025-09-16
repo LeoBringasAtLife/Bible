@@ -4,11 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planes de Lectura Bíblica</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Lectura Bíblica</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -18,15 +14,20 @@
         <div class="header-content">
             <div class="logo">
                 <i class="fas fa-bible"></i>
-                Bibla
+                Lectura Diaria
             </div>
             <nav class="navbar">
                 <ul class="nav-lista">
                     <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Planes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Devocionales</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#devocionales">Devocionales</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span class="material-symbols-outlined">menu</span>
+                        </a>
+                    </li>
                 </ul>
+
             </nav>
         </div>
     </header>
@@ -35,8 +36,8 @@
     <div class="main-content">
         <!-- Hero section -->
         <section class="hero">
-            <h1>PLANES DE LECTURA Y DEVOCIONALES GRATUITOS</h1>
-            <p>Los planes bíblicos le ayudan a interactuar con la Palabra de Dios todos los días.</p>
+            <h1>PLANES DE LECTURA Y DEVOCIONALES</h1>
+            <p>La Palabra de Dios te acerca cada día a Dios.</p>
         </section>
 
         <!-- Verse of the day -->
@@ -45,50 +46,107 @@
                 <div
                     style="background-color: #34495e; height: 100%; display: flex; align-items: center; justify-content: center;">
                     <div class="verse-overlay">
-                        <div>
-                            <i class="fas fa-cross" style="font-size: 3rem; margin-bottom: 15px;"></i>
-                        </div>
+
                     </div>
                 </div>
             </div>
             <div class="verse-content">
                 <p class="verse-title">VERSÍCULO DEL DÍA</p>
                 <p class="verse-text">
-                    “Grabad estas palabras en vuestra mente y en vuestro pensamiento; atadlas como señales en vuestras
-                    manos y en vuestra frente.
+                    Grábense estas palabras en el corazón y en la mente,
+                    átenlas en sus manos como un signo y llévenlas en su frente como una marca.
                 </p>
-                <p class="verse-reference">Deuteronomio 11:18 (DHHED)</p>
+                <p class="verse-reference">Deuteronomio 11:18 (NVI)</p>
                 <div class="verse-buttons">
                     <button class="btn-share">
-                        <i class="fas fa-share-alt"></i> Compartir
+                        <span class="material-symbols-outlined">share</span> COMPARTIR
                     </button>
                     <button class="btn-subscribe">
-                        <i class="fas fa-bell"></i> Subscribete
+                        <span class="material-symbols-outlined">notifications</span> SUBSCRÍBETE
                     </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Devocionales Section -->
+        <section class="devotionals-section" id="devocionales">
+            <h2 class="section-title">Devocionales Diarios</h2>
+            <div class="devotionals-grid">
+                <!-- Devocional 1 -->
+                <div class="devotional-card">
+                    <div class="devotional-content">
+                        <h3 class="devotional-title">Inercia en Acción</h3>
+                        <div class="devotional-author">
+                        </div>
+                        <p class="devotional-description">
+                            Este texto del que voy a hablar no es el que Dios me habló, pero es el puente para llevarte
+                            a lo que Dios me habló. A veces somos complicados (¿a veces?) y nos cuesta aceptar los
+                            cambios, entonces demos algunas vueltas para llegar. Hace…
+                        </p>
+                        <a href="devo.html" class="devotional-button">Leer Devocional</a>
+                    </div>
+                </div>
+
+                <!-- Devocional 2 -->
+                <div class="devotional-card">
+                    <div class="devotional-image">
+                        <div style="background-color: #e74c3c;">
+                        </div>
+                    </div>
+                    <div class="devotional-content">
+                        <h3 class="devotional-title">De Perros y Vómitos</h3>
+                        <div class="devotional-author">
+                        </div>
+                        <p class="devotional-description">
+                            ¡Qué tonto hay que ser para no aprender de los propios errores! Dicen que “el único animal
+                            que tropieza dos veces con la misma piedra es el hombre”. No sé si es tan así, porque he
+                            visto a perros o gatos volver a caer en…
+                        </p>
+                        <a href="#" class="devotional-button">Leer Devocional</a>
+                    </div>
+                </div>
+
+                <!-- Devocional 3 -->
+                <div class="devotional-card">
+                    <div class="devotional-image">
+                        <div style="background-color: #27ae60;">
+                        </div>
+                    </div>
+                    <div class="devotional-content">
+                        <h3 class="devotional-title">Populismo Religioso</h3>
+                        <div class="devotional-author">
+                        </div>
+                        <p class="devotional-description">
+                            “Vivimos en una época de iglesias secas”, decía la nota que leí citando a un aparente
+                            importante y serio predicador. Acusar a un predicador por la falta de transformación es
+                            ahondar la doctrina del “populismo religioso”: la gente es ignorante y necesita ser
+                            manejada, manipulada…
+                        </p>
+                        <a href="#" class="devotional-button">Leer Devocional</a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Reading plans -->
         <section class="reading-plans">
-            <h2 class="section-title">Planes de lectura destacados</h2>
+            <h2 class="section-title" id="planes">Planes de Lectura Destacados</h2>
             <div class="plans-grid">
                 <!-- Plan 1 -->
                 <div class="plan-card">
                     <div class="plan-image">
                         <div
                             style="background-color: #16a085; height: 100%; display: flex; align-items: center; justify-content: center; color: white;">
-                            <i class="fas fa-seedling" style="font-size: 3rem;"></i>
                         </div>
                     </div>
                     <div class="plan-content">
-                        <h3 class="plan-title">Viaje a través de Génesis</h3>
+                        <h3 class="plan-title">Leamos la Biblia juntos (septiembre)</h3>
                         <div class="plan-duration">
-                            <i class="far fa-clock"></i> 7 Días
                         </div>
                         <p class="plan-description">
-                            Explora el libro de los comienzos y descubre cómo la historia de Dios comienza con la
-                            creación, la caída y la redención.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi repellendus sed et
+                            necessitatibus dolores amet, saepe exercitationem earum, odit alias aliquam? Non
+                            exercitationem rerum ullam accusantium rem culpa illo architecto.
                         </p>
                         <a href="#" class="plan-button">Empezar Plan</a>
                     </div>
@@ -99,17 +157,16 @@
                     <div class="plan-image">
                         <div
                             style="background-color: #2980b9; height: 100%; display: flex; align-items: center; justify-content: center; color: white;">
-                            <i class="fas fa-mountain" style="font-size: 3rem;"></i>
                         </div>
                     </div>
                     <div class="plan-content">
-                        <h3 class="plan-title">Deuteronomio Explicado</h3>
+                        <h3 class="plan-title">Leer La BIblia En Un Año</h3>
                         <div class="plan-duration">
-                            <i class="far fa-clock"></i> 10 Días
                         </div>
                         <p class="plan-description">
-                            Las últimas palabras de Moisés a Israel: un llamado a recordar la fidelidad de Dios y
-                            obedecer sus mandamientos.
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat amet hic, magnam possimus
+                            omnis cumque exercitationem expedita aliquid repellat, nesciunt eaque ratione iure nostrum
+                            cupiditate consectetur id. Aut, in voluptatibus!
                         </p>
                         <a href="#" class="plan-button">Empezar Plan</a>
                     </div>
@@ -120,83 +177,21 @@
                     <div class="plan-image">
                         <div
                             style="background-color: #c0392b; height: 100%; display: flex; align-items: center; justify-content: center; color: white;">
-                            <i class="fas fa-heart" style="font-size: 3rem;"></i>
                         </div>
                     </div>
                     <div class="plan-content">
-                        <h3 class="plan-title">Marcas de un verdadero cristiano</h3>
+                        <h3 class="plan-title">Proverbios (1-31 capítulos)</h3>
                         <div class="plan-duration">
-                            <i class="far fa-clock"></i> 5 Días
                         </div>
                         <p class="plan-description">
-                            Descubra lo que realmente significa seguir a Cristo y reflejar su carácter en su vida
-                            diaria.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi architecto dolores
+                            voluptas temporibus? Distinctio, ipsum veritatis, mollitia non cupiditate saepe nihil error
+                            excepturi, tempora repellendus ea odit eveniet reiciendis ut?
                         </p>
                         <a href="#" class="plan-button">Empezar Plan</a>
                     </div>
                 </div>
 
-                <!-- Plan 4 -->
-                <div class="plan-card">
-                    <div class="plan-image">
-                        <div
-                            style="background-color: #f39c12; height: 100%; display: flex; align-items: center; justify-content: center; color: white;">
-                            <i class="fas fa-star" style="font-size: 3rem;"></i>
-                        </div>
-                    </div>
-                    <div class="plan-content">
-                        <h3 class="plan-title">This Is the Good Life</h3>
-                        <div class="plan-duration">
-                            <i class="far fa-clock"></i> 9 days
-                        </div>
-                        <p class="plan-description">
-                            A 9-day journey to discover the abundant life that Jesus offers to those who follow Him.
-                        </p>
-                        <a href="#" class="plan-button">Empezar Plan</a>
-                    </div>
-                </div>
-
-                <!-- Plan 5 -->
-                <div class="plan-card">
-                    <div class="plan-image">
-                        <div
-                            style="background-color: #8e44ad; height: 100%; display: flex; align-items: center; justify-content: center; color: white;">
-                            <i class="fas fa-compass" style="font-size: 3rem;"></i>
-                        </div>
-                    </div>
-                    <div class="plan-content">
-                        <h3 class="plan-title">An INVITATION to FOLLOW</h3>
-                        <div class="plan-duration">
-                            <i class="far fa-clock"></i> 5 days
-                        </div>
-                        <p class="plan-description">
-                            A 5-day journey into discipleship exploring what it means to answer Jesus' call to follow
-                            Him.
-                        </p>
-                        <a href="#" class="plan-button">Empezar Plan</a>
-                    </div>
-                </div>
-
-                <!-- Plan 6 -->
-                <div class="plan-card">
-                    <div class="plan-image">
-                        <div
-                            style="background-color: #27ae60; height: 100%; display: flex; align-items: center; justify-content: center; color: white;">
-                            <i class="fas fa-book-open" style="font-size: 3rem;"></i>
-                        </div>
-                    </div>
-                    <div class="plan-content">
-                        <h3 class="plan-title">GENESIS Explained Part 2</h3>
-                        <div class="plan-duration">
-                            <i class="far fa-clock"></i> 12 days
-                        </div>
-                        <p class="plan-description">
-                            Continue your journey through Genesis with Part 2, covering the stories of Abraham, Isaac,
-                            and Jacob.
-                        </p>
-                        <a href="#" class="plan-button">Empezar Plan</a>
-                    </div>
-                </div>
             </div>
 
             <div class="browse-all">
@@ -213,9 +208,6 @@
                 Biblia
             </div>
             <div class="footer-links">
-                <a href="#" class="footer-link">Política de Privacidad</a>
-                <a href="#" class="footer-link">Terminos de Condiciones</a>
-                <a href="#" class="footer-link">Contacta con nosotros</a>
             </div>
         </div>
     </footer>

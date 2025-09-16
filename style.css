@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+
 *,
 *::after,
 *::before {
@@ -8,18 +11,22 @@
 
 /* Body y tipografía */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: Oxygen, sans-serif;
     line-height: 1.6;
     background-color: #f5f7fa;
     color: #333;
     padding-bottom: 40px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
 h4 {
-    font-family: 'Merriweather', serif;
+    font-family: Oxygen, serif;
     font-weight: 700;
 }
 
@@ -28,7 +35,6 @@ h4 {
     background: linear-gradient(135deg, #2c3e50 0%, #1a2530 100%);
     color: white;
     padding: 20px 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
@@ -61,6 +67,7 @@ h4 {
     list-style: none;
     display: flex;
     gap: 25px;
+    align-items: center;
 }
 
 .nav-item {
@@ -72,7 +79,7 @@ h4 {
     color: #ecf0f1;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 8px 12px;
     display: block;
     transition: all 0.3s ease;
@@ -95,7 +102,7 @@ h4 {
     margin-bottom: 40px;
     padding: 30px;
     background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .hero h1 {
@@ -106,8 +113,8 @@ h4 {
 }
 
 .hero p {
-    font-size: 1.1em;
-    color: #7f8c8d;
+    font-size: 1.2rem;
+    color: #000005cd;
     max-width: 700px;
     margin: 0 auto;
     text-wrap: stable;
@@ -119,7 +126,7 @@ h4 {
     background-color: #fff;
     overflow: hidden;
     margin-bottom: 40px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .verse-image {
@@ -140,7 +147,7 @@ h4 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+    background: #1a2530;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,8 +170,8 @@ h4 {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 15px;
-    color: #3498db;
-    font-size: 0.9rem;
+    color: #121212;
+    font-size: 1.1em;
     letter-spacing: 1px;
 }
 
@@ -177,7 +184,6 @@ h4 {
 }
 
 .verse-reference {
-    font-style: italic;
     color: #7f8c8d;
     margin-bottom: 25px;
     font-size: 1.1rem;
@@ -218,6 +224,74 @@ h4 {
     background-color: #2980b9;
 }
 
+/* Devotionals section */
+.devotionals-section {
+    margin-bottom: 40px;
+}
+
+.devotionals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.devotional-card {
+    background-color: #fff;
+    overflow: hidden;
+    outline: 1px solid rgba(0, 0, 0, 0.113);
+}
+
+.devotional-card:hover {
+    outline: 1px solid rgba(0, 0, 0, 0.3);
+    outline-offset: -1px;
+    /* opcional para que quede pegado al elemento */
+}
+
+
+
+
+.devotional-content {
+    padding: 20px;
+}
+
+.devotional-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.devotional-author {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.devotional-description {
+    color: #34495e;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.devotional-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #141c24;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.devotional-button:hover {
+    background-color: #363f48;
+}
+
 /* Reading plans section */
 .reading-plans {
     margin-bottom: 40px;
@@ -231,15 +305,6 @@ h4 {
     padding-bottom: 10px;
 }
 
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 4px;
-    background-color: #3498db;
-}
 
 .plans-grid {
     display: grid;
@@ -250,11 +315,11 @@ h4 {
 .plan-card {
     background-color: #fff;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .plan-card:hover {
-    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .plan-image {
@@ -302,17 +367,15 @@ h4 {
 .plan-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #141c24;
     color: white;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
-    transition: background-color 0.3s ease;
-    margin: auto 0;
 }
 
 .plan-button:hover {
-    background-color: #2980b9;
+    background-color: #363f48;
 }
 
 /* Browse all plans */
@@ -329,14 +392,10 @@ h4 {
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .browse-button:hover {
-    background-color: #34495e;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgba(44, 62, 80, 0.83);
 }
 
 /* Footer */
@@ -382,8 +441,16 @@ h4 {
         flex-direction: column;
     }
 
-    .verse-image {
+    .verse-overlay {
+        display: none;
+    }
+
+    .verse-overlay .verse-image {
         height: 200px;
+    }
+
+    .devotionals-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 }
 
@@ -437,5 +504,9 @@ h4 {
 
     .hero p {
         font-size: 1rem;
+    }
+
+    .devotionals-grid {
+        grid-template-columns: 1fr;
     }
 }

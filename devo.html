@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devocional - Lectura Diaria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Oxygen', sans-serif;
+            line-height: 1.6;
+            background-color: #f5f7fa;
+            color: #333;
+            padding-bottom: 40px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #1a2530 100%);
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: #ffffff;
+        }
+
+        .back-button {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .devotional-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .devotional-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .devotional-header {
+            padding: 30px 30px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .devotional-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .devotional-meta {
+            display: flex;
+            gap: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .devotional-content {
+            padding: 30px;
+            line-height: 1.8;
+        }
+
+        .devotional-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: 25px;
+            border-radius: 6px;
+        }
+
+        .devotional-text {
+            font-size: 1.1rem;
+            color: #34495e;
+            margin-bottom: 20px;
+        }
+
+        .devotional-reference {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            margin: 30px 0;
+            font-style: italic;
+        }
+
+        .devotional-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .nav-button {
+            padding: 12px 25px;
+            background-color: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background-color: #34495e;
+        }
+
+        .error-message {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .error-message h2 {
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+
+        .error-message p {
+            margin-bottom: 30px;
+            color: #7f8c8d;
+        }
+
+        @media (max-width: 768px) {
+            .devotional-title {
+                font-size: 1.6rem;
+            }
+
+            .devotional-meta {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .devotional-content {
+                padding: 20px;
+            }
+
+            .devotional-image {
+                height: 200px;
+            }
+
+            .devotional-navigation {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-button {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-bible"></i>
+                Lectura Diaria
+            </div>
+            <a href="../from.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Volver al Inicio
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="devotional-container">
+        <div id="devotional-content">
+            <!-- El contenido del devocional se cargará aquí dinámicamente -->
+        </div>
+    </div>
+
+    <script>
+        // Base de datos de devocionales
+        const devotionals = [
+            {
+                id: 1,
+                title: "Inercia en Acción",
+                author: "Por el equipo de Lectura Diaria",
+                date: "15 de Septiembre, 2023",
+                image: "/devocionales/assets/inercia-en-accion.webp",
+                content: `
+                    <p>Este texto del que voy a hablar no es el que Dios me habló, pero es el puente para llevarte a lo que Dios me habló. A veces somos complicados (¿a veces?) y nos cuesta aceptar los cambios, entonces demos algunas vueltas para llegar.</p>
+                    
+                    <p>Hace unos días, mientras leía sobre física, me encontré con el principio de inercia: "Un cuerpo en reposo tiende a permanecer en reposo, y un cuerpo en movimiento tiende a permanecer en movimiento". ¡Qué principio tan espiritual!</p>
+                    
+                    <p>Cuántas veces nos quedamos "en reposo" espiritualmente, paralizados por el miedo, la comodidad o la indecisión. Y una vez que estamos quietos, nos cuesta enormemente volver a movernos.</p>
+                    
+                    <p>Pero también funciona al revés: cuando comenzamos a movernos hacia Dios, a leer Su Palabra, a orar, a servir, ese movimiento genera más movimiento. La inercia espiritual trabaja a nuestro favor.</p>
+                    
+                    <div class="devotional-reference">
+                        "Porque el Espíritu que Dios nos ha dado no nos hace cobardes, sino que nos da poder, amor y dominio propio." - 2 Timoteo 1:7 (NVI)
+                    </div>
+                    
+                    <p>Hoy es un buen día para vencer la inercia del reposo y comenzar a movernos hacia Dios. Pequeños pasos generan grandes momentum espiritual.</p>
+                `
+            },
+            {
+                id: 2,
+                title: "De Perros y Vómitos",
+                author: "Por el equipo de Lectura Diaria",
+                date: "12 de Septiembre, 2023",
+                image: "/devocionales/assets/De-Perros-y-Vómitos.webp",
+                content: `
+                    <p>¡Qué tonto hay que ser para no aprender de los propios errores! Dicen que "el único animal que tropieza dos veces con la misma piedra es el hombre". No sé si es tan así, porque he visto a perros o gatos volver a caer en los mismos errores, pero la expresión tiene su punto.</p>
+                    
+                    <p>Proverbios 26:11 dice: "Como perro que vuelve a su vómito, así es el necio que repite su necedad". Una imagen gráfica y desagradable, pero muy efectiva para transmitir el mensaje.</p>
+                    
+                    <p>¿Por qué volvemos una y otra vez a lo que nos hace daño? A patrones de pensamiento destructivos, a relaciones tóxicas, a hábitos que sabemos que no nos convienen.</p>
+                    
+                    <p>La respuesta often está en la comodidad de lo conocido. Incluso si es dañino, es familiar. El cambio asusta, la transformación requiere esfuerzo.</p>
+                    
+                    <div class="devotional-reference">
+                        "Por lo tanto, si alguno está en Cristo, es una nueva creación. ¡Lo viejo ha pasado, ha llegado ya lo nuevo!" - 2 Corintios 5:17 (NVI)
+                    </div>
+                    
+                    <p>Dios nos ofrece una verdadera transformación, no solo un "parche" temporal. Pero debemos elegir dejar atrás el "vómito" de nuestras viejas costumbres para recibir el banquete que Él tiene preparado.</p>
+                `
+            },
+            {
+                id: 3,
+                title: "Populismo Religioso",
+                author: "Por el equipo de Lectura Diaria",
+                date: "8 de Septiembre, 2023",
+                image: "devocionales/assets/Populismo-Religioso.webp",
+                content: `
+                    <p>"Vivimos en una época de iglesias secas", decía la nota que leí citando a un aparente importante y serio predicador. Acusar a un predicador por la falta de transformación es ahondar la doctrina del "populismo religioso": la gente es ignorante y necesita ser manejada, manipulada por élites iluminadas.</p>
+                    
+                    <p>Pero el Evangelio genuino es todo lo contrario. Jesús confió en personas comunes y corrientes para expandir Su mensaje. El Espíritu Santo fue derramado sobre toda carne, no solo sobre una élite espiritual.</p>
+                    
+                    <p>El populismo religioso asume que las personas no pueden entender las Escrituras por sí mismas, que necesitan intermediarios que les digan qué pensar y cómo vivir.</p>
+                    
+                    <p>Pero Jesús dijo: "Y conocerán la verdad, y la verdad los hará libres" (Juan 8:32). No dijo "y conocerán a sus líderes religiosos, y ellos los harán libres".</p>
+                    
+                    <div class="devotional-reference">
+                        "Pero el Consolador, el Espíritu Santo, a quien el Padre enviará en mi nombre, les enseñará todas las cosas y les hará recordar todo lo que les he dicho." - Juan 14:26 (NVI)
+                    </div>
+                    
+                    <p>Tenemos al mejor Maestro viviendo dentro de nosotros. Claro que necesitamos comunidad, accountability, y el don de maestros que Dios ha dado a la Iglesia. Pero nunca como sustitutos del trabajo directo del Espíritu Santo en cada creyente.</p>
+                    
+                    <p>Hoy, elige beber directamente de la fuente en lugar de conformarte con goteras controladas por otros.</p>
+                `
+            }
+        ];
+
+        // Función para obtener parámetros de la URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Función para cargar el devocional
+        function loadDevotional() {
+            const devotionalId = parseInt(getQueryParam('id'));
+            const devotionalContainer = document.getElementById('devotional-content');
+
+            if (!devotionalId) {
+                devotionalContainer.innerHTML = `
+                    <div class="error-message">
+                        <h2>Devocional no especificado</h2>
+                        <p>No se ha proporcionado un ID de devocional válido.</p>
+                        <a href="../from.html" class="nav-button">
+                            <i class="fas fa-home"></i> Volver al Inicio
+                        </a>
+                    </div>
+                `;
+                return;
+            }
+
+            const devotional = devotionals.find(d => d.id === devotionalId);
+
+            if (!devotional) {
+                devotionalContainer.innerHTML = `
+                    <div class="error-message">
+                        <h2>Devocional no encontrado</h2>
+                        <p>El devocional con ID ${devotionalId} no existe.</p>
+                        <a href="index.html" class="nav-button">
+                            <i class="fas fa-home"></i> Volver al Inicio
+                        </a>
+                    </div>
+                `;
+                return;
+            }
+
+            // Calcular devocionales anterior y siguiente
+            const prevDevotional = devotionals.find(d => d.id === devotionalId - 1);
+            const nextDevotional = devotionals.find(d => d.id === devotionalId + 1);
+
+            devotionalContainer.innerHTML = `
+                <div class="devotional-card">
+                    <div class="devotional-header">
+                        <h1 class="devotional-title">${devotional.title}</h1>
+                        <div class="devotional-meta">
+                            <span>${devotional.author}</span>
+                            <span>${devotional.date}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="devotional-content">
+                        <img src="${devotional.image}" alt="${devotional.title}" class="devotional-image">
+                        <div class="devotional-text">
+                            ${devotional.content}
+                        </div>
+                    </div>
+                    
+                    <div class="devotional-navigation">
+                        ${prevDevotional ? `
+                            <a href="devo.html?id=${prevDevotional.id}" class="nav-button">
+                                <i class="fas fa-arrow-left"></i> Anterior
+                            </a>
+                        ` : '<div></div>'}
+                        
+                        ${nextDevotional ? `
+                            <a href="devo.html?id=${nextDevotional.id}" class="nav-button">
+                                Siguiente <i class="fas fa-arrow-right"></i>
+                            </a>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+
+            // Actualizar el título de la página
+            document.title = `${devotional.title} - Lectura Diaria`;
+        }
+
+        // Cargar el devocional cuando la página esté lista
+        document.addEventListener('DOMContentLoaded', loadDevotional);
+    </script>
+</body>
+
+</html>
