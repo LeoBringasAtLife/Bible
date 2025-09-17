@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lectura Bíblica Diaria</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -41,26 +43,28 @@
                 <div
                     style="background-color: #34495e; height: 100%; display: flex; align-items: center; justify-content: center;">
                     <div class="verse-overlay">
-                        <i class="fas fa-cross" style="font-size: 3rem;"></i>
+
                     </div>
                 </div>
             </div>
             <div class="verse-content">
                 <p class="verse-title">VERSÍCULO DEL DÍA</p>
                 <p class="verse-text">
-                    Grábense estas palabras en el corazón y en la mente,
-                    átenlas en sus manos como un signo y llévenlas en su frente como una marca.
+                    Nunca se apartará de tu boca este libro de instrucción; meditarás en él día y noche para actuar con
+                    cuidado según todo lo que en él está escrito. Así prosperarás y tendrás éxito.
                 </p>
-                <p class="verse-reference">Deuteronomio 11:18 (NVI)</p>
+                <p class="verse-reference">Josué 1:8 (NVI)</p>
                 <div class="verse-buttons">
                     <button class="btn-share">
-                        <i class="fas fa-share-alt"></i> COMPARTIR
+                        <i class="material-icons">share</i> COMPARTIR
                     </button>
                     <button class="btn-twitter">
-                        <i class="fab fa-x-twitter"></i> X (Twitter)
+                        <img src="assets/iconos/x.svg" alt="X Twitter"
+                            style="width: 20px; height: 20px; margin-right: 8px; filter: invert(100%);">
+                        X
                     </button>
                     <button class="btn-subscribe">
-                        <i class="fas fa-bell"></i> SUSCRÍBETE
+                        <i class="material-icons">notifications</i> SUSCRÍBETE
                     </button>
                 </div>
             </div>
@@ -75,7 +79,7 @@
                     <div class="devotional-content">
                         <h3 class="devotional-title">Inercia en Acción</h3>
                         <div class="devotional-author">
-                            <i class="fas fa-user"></i> Escrito por Walter Escalante
+                            <i class="material-icons">person</i> Escrito por Walter Escalante
                         </div>
                         <p class="devotional-description">
                             Este texto del que voy a hablar no es el que Dios me habló, pero es el puente para llevarte
@@ -91,11 +95,11 @@
                     <div class="devotional-content">
                         <h3 class="devotional-title">De Perros y Vómitos</h3>
                         <div class="devotional-author">
-                            <i class="fas fa-user"></i> Escrito por Walter Escalante
+                            <i class="material-icons">person</i> Escrito por Walter Escalante
                         </div>
                         <p class="devotional-description">
-                            ¡Qué tonto hay que ser para no aprender de los propios errores! Dicen que “el único animal
-                            que tropieza dos veces con la misma piedra es el hombre”. No sé si es tan así, porque he
+                            ¡Qué tonto hay que ser para no aprender de los propios errores! Dicen que "el único animal
+                            que tropieza dos veces con la misma piedra es el hombre". No sé si es tan así, porque he
                             visto a perros o gatos volver a caer en…
                         </p>
                         <a href="devo.html?id=2" class="devotional-button">Leer Devocional</a>
@@ -107,12 +111,12 @@
                     <div class="devotional-content">
                         <h3 class="devotional-title">Populismo Religioso</h3>
                         <div class="devotional-author">
-                            <i class="fas fa-user"></i> Escrito por Walter Escalante
+                            <i class="material-icons">person</i> Escrito por Walter Escalante
                         </div>
                         <p class="devotional-description">
-                            “Vivimos en una época de iglesias secas”, decía la nota que leí citando a un aparente
+                            "Vivimos en una época de iglesias secas", decía la nota que leí citando a un aparente
                             importante y serio predicador. Acusar a un predicador por la falta de transformación es
-                            ahondar la doctrina del “populismo religioso”: la gente es ignorante y necesita ser
+                            ahondar la doctrina del "populismo religioso": la gente es ignorante y necesita ser
                             manejada, manipulada…
                         </p>
                         <a href="devo.html?id=3" class="devotional-button">Leer Devocional</a>
@@ -281,7 +285,7 @@
                     <div class="plan-content">
                         <h3 class="plan-title">Leamos la Biblia juntos (septiembre)</h3>
                         <div class="plan-duration">
-                            <i class="far fa-clock"></i> 30 días
+                            <i class="material-icons">schedule</i> 30 días
                         </div>
                         <p class="plan-description">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio blanditiis alias iste
@@ -297,13 +301,12 @@
                     <div class="plan-image">
                         <div
                             style="background-color: #2980b9; height: 100%; display: flex; align-items: center; justify-content: center; color: white;">
-
                         </div>
                     </div>
                     <div class="plan-content">
                         <h3 class="plan-title">Leer La Biblia En Un Año</h3>
                         <div class="plan-duration">
-                            <i class="far fa-clock"></i> 365 días
+                            <i class="material-icons">schedule</i> 365 días
                         </div>
                         <p class="plan-description">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio blanditiis alias iste
@@ -324,7 +327,7 @@
                     <div class="plan-content">
                         <h3 class="plan-title">Proverbios (1-31 capítulos)</h3>
                         <div class="plan-duration">
-                            <i class="far fa-clock"></i> 31 días
+                            <i class="material-icons">schedule</i> 31 días
                         </div>
                         <p class="plan-description">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio blanditiis alias iste
@@ -335,6 +338,30 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section>
+            <!-- Lecturas Diarias Section -->
+            <section class="daily-readings">
+                <h2 class="section-title">Lecturas Diarias</h2>
+                <div class="daily-readings-grid">
+                    <div class="reading-card">
+                        <img src="assets/lecturas/WhatsApp Image 2025-09-03 at 07.14.32.jpeg" alt="Lectura 1">
+                    </div>
+                    <div class="reading-card">
+                        <img src="assets/lecturas/WhatsApp Image 2025-09-04 at 07.12.27.jpeg" alt="Lectura 2">
+                    </div>
+                    <div class="reading-card">
+                        <img src="assets/lecturas/WhatsApp Image 2025-09-05 at 06.04.29.jpeg" alt="Lectura 3">
+                    </div>
+                    <div class="reading-card">
+                        <img src="assets/lecturas/WhatsApp Image 2025-09-07 at 06.49.32.jpeg" alt="Lectura 4">
+                    </div>
+                    <div class="reading-card">
+                        <img src="assets/lecturas/WhatsApp Image 2025-09-08 at 07.13.23.jpeg" alt="Lectura 4">
+                    </div>
+                </div>
+            </section>
 
         </section>
     </div>
@@ -352,9 +379,11 @@
                 <a href="#" class="footer-link">Contacto</a>
             </div>
         </div>
+
+
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

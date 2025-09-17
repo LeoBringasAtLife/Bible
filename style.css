@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
-
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap");
 
 *,
 *::after,
@@ -218,8 +216,6 @@ h4 {
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
 }
 
 .btn-share:hover {
@@ -235,8 +231,6 @@ h4 {
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
 }
 
 .btn-twitter:hover {
@@ -251,8 +245,6 @@ h4 {
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
 }
 
 .btn-subscribe:hover {
@@ -275,7 +267,6 @@ h4 {
     background-color: #fff;
     overflow: hidden;
     outline: 1px solid rgba(0, 0, 0, 0.113);
-    border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -318,7 +309,6 @@ h4 {
     font-weight: 600;
     font-size: 0.9rem;
     transition: background-color 0.3s ease;
-    border-radius: 4px;
 }
 
 .devotional-button:hover {
@@ -379,7 +369,6 @@ h4 {
 
 .video-card {
     background-color: #fff;
-    border-radius: 8px;
     overflow: hidden;
     outline: 1px solid rgba(0, 0, 0, 0.113);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -472,7 +461,6 @@ h4 {
     background-color: #fff;
     overflow: hidden;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -528,13 +516,31 @@ h4 {
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
-    border-radius: 4px;
     transition: background-color 0.3s ease;
 }
 
 .plan-button:hover {
     background-color: #363f48;
 }
+
+/* Lectura Diaria Section */
+.daily-readings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.reading-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.reading-card img:hover {
+    background: red;
+}
+
 
 /* Footer */
 .footer {
@@ -648,6 +654,7 @@ h4 {
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        display: none;
     }
 
     .verse-buttons {
@@ -659,7 +666,7 @@ h4 {
     }
 
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
     }
 
     .hero p {

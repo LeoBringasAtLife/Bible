@@ -285,7 +285,78 @@ const devotionals = [
                     
                     <p>Te dejo con las palabras de Dios a Jeremías: “Conviértanse ellos a ti, y tú no te conviertas a ellos” (Jeremías 15:19).</p>
                 `
-    }
+    },
+    {
+        id: 4,
+        title: "Texto",
+        author: "Escrito por Walter Escalante",
+        date: "fecha de mes, Año",
+        image: "assets/Populismo-Religioso.webp",
+        content: `
+                <p>Texto</p>
+                `
+    },
+    {
+        id: 5,
+        title: "Texto",
+        author: "Escrito por Walter Escalante",
+        date: "fecha de mes, Año",
+        image: "assets/Populismo-Religioso.webp",
+        content: `
+                <p>Texto</p>
+                `
+    },
+    {
+        id: 6,
+        title: "Texto",
+        author: "Escrito por Walter Escalante",
+        date: "fecha de mes, Año",
+        image: "assets/Populismo-Religioso.webp",
+        content: `
+                <p>Texto</p>
+                `
+    },
+    {
+        id: 7,
+        title: "Texto",
+        author: "Escrito por Walter Escalante",
+        date: "fecha de mes, Año",
+        image: "assets/Populismo-Religioso.webp",
+        content: `
+                <p>Texto</p>
+                `
+    },
+    {
+        id: 8,
+        title: "Texto",
+        author: "Escrito por Walter Escalante",
+        date: "fecha de mes, Año",
+        image: "assets/Populismo-Religioso.webp",
+        content: `
+                <p>Texto</p>
+                `
+    },
+    {
+        id: 9,
+        title: "Texto",
+        author: "Escrito por Walter Escalante",
+        date: "fecha de mes, Año",
+        image: "assets/Populismo-Religioso.webp",
+        content: `
+                <p>Texto</p>
+                `
+    },
+    {
+        id: 10,
+        title: "Texto",
+        author: "Escrito por Walter Escalante",
+        date: "fecha de mes, Año",
+        image: "assets/Populismo-Religioso.webp",
+        content: `
+                <p>Texto</p>
+                `
+    },
+
 ];
 
 // Función para obtener parámetros de la URL
