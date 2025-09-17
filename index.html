@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lectura Bíblica Diaria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -21,13 +23,8 @@
                     <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
                     <li class="nav-item"><a class="nav-link" href="#devocionales">Devocionales</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span class="material-symbols-outlined">menu</span>
-                        </a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#videos">Videos</a></li>
                 </ul>
-
             </nav>
         </div>
     </header>
@@ -46,7 +43,7 @@
                 <div
                     style="background-color: #34495e; height: 100%; display: flex; align-items: center; justify-content: center;">
                     <div class="verse-overlay">
-
+                        <i class="fas fa-cross" style="font-size: 3rem;"></i>
                     </div>
                 </div>
             </div>
@@ -59,10 +56,13 @@
                 <p class="verse-reference">Deuteronomio 11:18 (NVI)</p>
                 <div class="verse-buttons">
                     <button class="btn-share">
-                        <span class="material-symbols-outlined">share</span> COMPARTIR
+                        <i class="fas fa-share-alt"></i> COMPARTIR
+                    </button>
+                    <button class="btn-twitter">
+                        <i class="fab fa-x-twitter"></i> X (Twitter)
                     </button>
                     <button class="btn-subscribe">
-                        <span class="material-symbols-outlined">notifications</span> SUBSCRÍBETE
+                        <i class="fas fa-bell"></i> SUSCRÍBETE
                     </button>
                 </div>
             </div>
@@ -77,44 +77,39 @@
                     <div class="devotional-content">
                         <h3 class="devotional-title">Inercia en Acción</h3>
                         <div class="devotional-author">
+                            <i class="fas fa-user"></i> Escrito por Walter Escalante
                         </div>
                         <p class="devotional-description">
                             Este texto del que voy a hablar no es el que Dios me habló, pero es el puente para llevarte
                             a lo que Dios me habló. A veces somos complicados (¿a veces?) y nos cuesta aceptar los
                             cambios, entonces demos algunas vueltas para llegar. Hace…
                         </p>
-                        <a href="devo.html" class="devotional-button">Leer Devocional</a>
+                        <a href="devo.html?id=1" class="devotional-button">Leer Devocional</a>
                     </div>
                 </div>
 
                 <!-- Devocional 2 -->
                 <div class="devotional-card">
-                    <div class="devotional-image">
-                        <div style="background-color: #e74c3c;">
-                        </div>
-                    </div>
                     <div class="devotional-content">
                         <h3 class="devotional-title">De Perros y Vómitos</h3>
                         <div class="devotional-author">
+                            <i class="fas fa-user"></i> Escrito por Walter Escalante
                         </div>
                         <p class="devotional-description">
                             ¡Qué tonto hay que ser para no aprender de los propios errores! Dicen que “el único animal
                             que tropieza dos veces con la misma piedra es el hombre”. No sé si es tan así, porque he
                             visto a perros o gatos volver a caer en…
                         </p>
-                        <a href="#" class="devotional-button">Leer Devocional</a>
+                        <a href="devo.html?id=2" class="devotional-button">Leer Devocional</a>
                     </div>
                 </div>
 
                 <!-- Devocional 3 -->
                 <div class="devotional-card">
-                    <div class="devotional-image">
-                        <div style="background-color: #27ae60;">
-                        </div>
-                    </div>
                     <div class="devotional-content">
                         <h3 class="devotional-title">Populismo Religioso</h3>
                         <div class="devotional-author">
+                            <i class="fas fa-user"></i> Escrito por Walter Escalante
                         </div>
                         <p class="devotional-description">
                             “Vivimos en una época de iglesias secas”, decía la nota que leí citando a un aparente
@@ -122,31 +117,178 @@
                             ahondar la doctrina del “populismo religioso”: la gente es ignorante y necesita ser
                             manejada, manipulada…
                         </p>
-                        <a href="#" class="devotional-button">Leer Devocional</a>
+                        <a href="devo.html?id=3" class="devotional-button">Leer Devocional</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Videos Section -->
+        <section class="videos-section" id="videos">
+            <h2 class="section-title">Contenido en Video</h2>
+
+            <div class="videos-tabs">
+                <button class="tab-button active" data-tab="videos">Videos</button>
+                <button class="tab-button" data-tab="shorts">Shorts</button>
+            </div>
+
+            <div class="videos-container active" id="videos-container">
+                <div class="videos-grid">
+                    <!-- Video 1 -->
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <iframe width="853" height="480" src="https://www.youtube.com/embed/pTd6Io_EGag"
+                                title="AMAR ES DAR" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">AMAR ES DAR</h3>
+                            <div class="video-meta">
+                                <span>32:15 min</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <iframe width="853" height="480" src="https://www.youtube.com/embed/5lAQZiX_xQo"
+                                title="YA NO SOS ESCLAVO" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">YA NO SOS ESCLAVO</h3>
+                            <div class="video-meta">
+                                <span>21:51 min</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <iframe width="946" height="532" src="https://www.youtube.com/embed/uatwjIAc2XI"
+                                title="DECILE A TU IMPOSIBLE - Joel Ramírez" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">DECILE A TU IMPOSIBLE</h3>
+                            <div class="video-meta">
+                                <span>1:02 min</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="videos-container" id="shorts-container">
+                <div class="shorts-grid">
+                    <!-- Short 1 -->
+                    <div class="video-card">
+                        <div class="short-thumbnail">
+                            <iframe width="315" height="560" src="https://www.youtube.com/embed/CRkdsvMiWTA"
+                                title="HAY UNA PALABRA" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">HAY UNA PALABRA</h3>
+                            <div class="video-meta">
+                                <span>44 seg</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Short 2 -->
+                    <div class="video-card">
+                        <div class="short-thumbnail">
+                            <iframe width="367" height="653" src="https://www.youtube.com/embed/M2WASYRgYAI"
+                                title="INVESTIDURA" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">INVESTIDURA</h3>
+                            <div class="video-meta">
+                                <span>60 seg</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Short 3 -->
+                    <div class="video-card">
+                        <div class="short-thumbnail">
+                            <iframe width="367" height="653" src="https://www.youtube.com/embed/-9zuXC0jLaE"
+                                title="PERMANECER" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">PERMANECER</h3>
+                            <div class="video-meta">
+                                <span>50 seg</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Short 4 -->
+                    <div class="video-card">
+                        <div class="short-thumbnail">
+                            <iframe width="367" height="653" src="https://www.youtube.com/embed/RR9737yM_OM"
+                                title="El Fracaso no es Excusa" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">EL FRACASO NO ES EXCUSA</h3>
+                            <div class="video-meta">
+                                <span>55 seg</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Short 5 -->
+                    <div class="video-card">
+                        <div class="short-thumbnail">
+                            <iframe width="367" height="653" src="https://www.youtube.com/embed/1jQbvjLcPpo"
+                                title="ENTORNO" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">ENTORNO</h3>
+                            <div class="video-meta">
+                                <span>44 seg</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Reading plans -->
-        <section class="reading-plans">
-            <h2 class="section-title" id="planes">Planes de Lectura Destacados</h2>
+        <section class="reading-plans" id="planes">
+            <h2 class="section-title">Planes de Lectura Destacados</h2>
             <div class="plans-grid">
                 <!-- Plan 1 -->
                 <div class="plan-card">
                     <div class="plan-image">
-                        <div
-                            style="background-color: #16a085; height: 100%; display: flex; align-items: center; justify-content: center; color: white;">
+                        <div style="background-color: #16a085; height: 100%; display: flex; align-items:
+                            center; justify-content: center; color: white;">
                         </div>
                     </div>
                     <div class="plan-content">
                         <h3 class="plan-title">Leamos la Biblia juntos (septiembre)</h3>
                         <div class="plan-duration">
+                            <i class="far fa-clock"></i> 30 días
                         </div>
                         <p class="plan-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi repellendus sed et
-                            necessitatibus dolores amet, saepe exercitationem earum, odit alias aliquam? Non
-                            exercitationem rerum ullam accusantium rem culpa illo architecto.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio blanditiis alias iste
+                            accusantium dolore. Suscipit provident optio harum, reiciendis deserunt enim modi dolores,
+                            unde perferendis incidunt assumenda nemo facilis. Et?
                         </p>
                         <a href="#" class="plan-button">Empezar Plan</a>
                     </div>
@@ -157,16 +299,18 @@
                     <div class="plan-image">
                         <div
                             style="background-color: #2980b9; height: 100%; display: flex; align-items: center; justify-content: center; color: white;">
+
                         </div>
                     </div>
                     <div class="plan-content">
-                        <h3 class="plan-title">Leer La BIblia En Un Año</h3>
+                        <h3 class="plan-title">Leer La Biblia En Un Año</h3>
                         <div class="plan-duration">
+                            <i class="far fa-clock"></i> 365 días
                         </div>
                         <p class="plan-description">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat amet hic, magnam possimus
-                            omnis cumque exercitationem expedita aliquid repellat, nesciunt eaque ratione iure nostrum
-                            cupiditate consectetur id. Aut, in voluptatibus!
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio blanditiis alias iste
+                            accusantium dolore. Suscipit provident optio harum, reiciendis deserunt enim modi dolores,
+                            unde perferendis incidunt assumenda nemo facilis. Et?
                         </p>
                         <a href="#" class="plan-button">Empezar Plan</a>
                     </div>
@@ -182,21 +326,18 @@
                     <div class="plan-content">
                         <h3 class="plan-title">Proverbios (1-31 capítulos)</h3>
                         <div class="plan-duration">
+                            <i class="far fa-clock"></i> 31 días
                         </div>
                         <p class="plan-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi architecto dolores
-                            voluptas temporibus? Distinctio, ipsum veritatis, mollitia non cupiditate saepe nihil error
-                            excepturi, tempora repellendus ea odit eveniet reiciendis ut?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio blanditiis alias iste
+                            accusantium dolore. Suscipit provident optio harum, reiciendis deserunt enim modi dolores,
+                            unde perferendis incidunt assumenda nemo facilis. Et?
                         </p>
                         <a href="#" class="plan-button">Empezar Plan</a>
                     </div>
                 </div>
-
             </div>
 
-            <div class="browse-all">
-                <a href="#" class="browse-button">Explorar todos los planes</a>
-            </div>
         </section>
     </div>
 
@@ -205,12 +346,17 @@
         <div class="footer-content">
             <div class="footer-logo">
                 <i class="fas fa-bible"></i>
-                Biblia
+                Lectura Bíblica Diaria
             </div>
             <div class="footer-links">
+                <a href="#" class="footer-link">Política de Privacidad</a>
+                <a href="#" class="footer-link">Términos de Uso</a>
+                <a href="#" class="footer-link">Contacto</a>
             </div>
         </div>
     </footer>
+
+    <script src="script.js" defer></script>
 </body>
 
 </html>
